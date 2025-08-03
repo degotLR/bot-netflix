@@ -1,3 +1,17 @@
+// Servidor Express para mantener Railway activo
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+    res.send('🤖 Bot de WhatsApp activo y funcionando.');
+});
+
+app.listen(PORT, () => {
+    console.log(`🌐 Servidor Express activo en el puerto ${PORT}`);
+});
+
+
 const { Client } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 
